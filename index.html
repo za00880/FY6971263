@@ -10,10 +10,11 @@
     </style>
 </head>
 <body>
+    <img src="WebBanner2026.png" alt="University of Surrey banner">
     <h1>Why Is Landing on Mars So Difficult?</h1>
     <h2>The Engineering Behind Successful Martian Landings</h2>
     <p>University of Surrey - ENG0018 Conference Project</p>
-    <p>URN: [enter your URN]</p>
+    <p>URN: 6971263</p>
     <hr>
     <h2>Contents</h2>
     <ul>
@@ -29,14 +30,14 @@
 <p>Landing a spacecraft on the Martian surface presents a variety of significant engineering challenges due to the planet’s thin atmosphere, high entry velocities and limited opportunities for communication during the descent process. The level of aerodynamic braking produced by the Martian atmosphere is insufficient for parachutes alone to be able to decelerate a loaded spacecraft to a suitable landing speed. Therefore, engineers have had to develop complex landing systems combining heat shields, supersonic parachutes and rocket propulsion. This article aims to explore the physical challenges of an entry into the Martian atmosphere, examine the landing techniques used by the rovers NASA has landed on Mars, and discusses the limitations that the current level of technology has on future human exploration. We must understand all of these challenges in order to develop safer and more capable spacecraft which in future missions could deliver heavy payloads to the Martian surface to allow for scientific research.</p>
     </div>
 
-    <div id="introduction">
-<h2>Introduction</h2>
+    <div id="Introduction_InText">
+<h2 id="introduction">Introduction</h2>
 <p>Mars has for a long time been the major target for space exploration due to its geological history and the potential evidence of past microbial life. In order to do this spacecraft must survive a rapid descent through the atmosphere before landing safely on the surface.</p>
 <p>This process which is known as Entry, Descent and Landing (EDL), requires a variety of engineering systems both aboard the craft and back on Earth to operate concurrently in a controlled sequence. This process is described by NASA as the seven minutes of terror, reflecting the speed and complexity of the landing procedure <a href="#ref-nasa-nd">(NASA, no date)</a>.</p>
     </div>
 
-    <div id="atmosphere">
-<h2>The Challenge of Mars’s Atmosphere</h2>
+    <div id="Atmosphere_InText">
+<h2 id="atmosphere">The Challenge of Mars’s Atmosphere</h2>
 <p>One of the greatest difficulties when landing on Mars is its atmospheric density. The Martian atmosphere is 100 times thinner than Earth’s which makes conventional atmospheric braking which would be possible on Earth significantly less effective.</p>
 <p>The Aerodynamic drag, which acts against a spacecraft is expressed as:</p>
 <p><img src="drag_equation.png" alt="Drag equation: F equals one half rho v squared C d A"></p>
@@ -56,8 +57,8 @@
 <p><a href="#ref-troche">(Troche, 2024)</a></p>
     </div>
 
-    <div id="heat-shields">
-<h2>Atmospheric Entry and Heat Shields</h2>
+    <div id="HeatShields_InText">
+<h2 id="heat-shields">Atmospheric Entry and Heat Shields</h2>
 <p>Before landing, a spacecraft must dramatically reduce its velocity. NASA’s Perseverance rover entered the Martian atmosphere while travelling at 19,500 kph <a href="#ref-jpl-2020">(NASA Jet Propulsion Laboratory, 2020)</a>.</p>
 <p>At these speeds, compression and the heating of the gases in the air surrounding the spacecraft produce extreme thermal conditions. Without protection, sensitive technology and navigational equipment on board could be damaged or rendered too unstable to be accurate. Engineers therefore use an aeroshell incorporating a heat shield, which protects the spacecraft while also generating drag. Many concept landing systems use ablative shields which dissipate heat while they break down.</p>
 <p>Heat-shield design is a delicate art of balancing total mass of spacecraft against the thermal protection of the interior components. Additional shielding increases the level of protection of existing equipment but at the same time limits the total amount of equipment possible to carry onboard.</p>
@@ -74,7 +75,93 @@
 <li id="ref-troche">Troche, K. (2024) <i>Landing on Mars: A tricky feat!</i>. Available at: <a href="https://science.nasa.gov/solar-system/skywatching/night-sky-network/landing-on-mars-a-tricky-feat/">https://science.nasa.gov/solar-system/skywatching/night-sky-network/landing-on-mars-a-tricky-feat/</a> (Accessed: 25 October 2026).</li>
 <li id="ref-image">NASA Jet Propulsion Laboratory (2020) <i>Perseverance rover decelerates in the Martian atmosphere (illustration)</i>. Available at: <a href="https://www.jpl.nasa.gov/images/pia24314-perseverance-rover-decelerates-in-the-martian-atmosphere-illustration/">https://www.jpl.nasa.gov/images/pia24314-perseverance-rover-decelerates-in-the-martian-atmosphere-illustration/</a> (Accessed: 2 November 2026).</li></ol>
     </div>
-    <!-- Add the official validated time stamp from Lab H3 here. -->
-    <!-- The final version also needs the university banner, word count and presentation. -->
+    <!-- Timestamp and word count supplied in ENG0018 Lab H3 -->
+    <!-- //////////////////////////////////////////////////////////////////////////////// -->
+      <!-- ////////////////////////////// Adding last update ////////////////////////////// -->
+      <!-- //////////////////////////////////////////////////////////////////////////////// -->
+        <!-- Last commit time display -->
+    <div id="last-updated">Loading last update time...</div>
+    <!-- Verify Button -->
+    <button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
+        Verify Last Modified Time
+    </button>
+    <script>
+        async function getLastUpdatedTime() {
+            const username = 'za00880';
+            const repo = 'FY6971263';
+           
+            const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+            try {
+                const response = await fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/vnd.github.v3+json',
+                    }
+                });
+                if (!response.ok) {
+                    throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
+                }
+                const commits = await response.json();
+                if (commits && commits.length > 0) {
+                    const lastCommitDate = new Date(commits[0].commit.committer.date);
+                   
+                    // Displaying the time on load
+                    document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
+                } else {
+                    document.getElementById('last-updated').innerText = 'No commits found in the repository.';
+                }
+            } catch (error) {
+                console.error('Error fetching the last updated time:', error);
+                document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
+            }
+        }
+        // Function to verify the last update time by re-fetching it from the API
+        async function verifyLastUpdatedTime() {
+            document.getElementById('last-updated').innerText = 'Verifying...';
+            await getLastUpdatedTime();
+            if (document.getElementById("last-updated").innerText.startsWith("Last Modified Time:")) {
+                alert("Last modified time has been successfully verified from GitHub API.");
+            } else {
+                alert("Could not verify the timestamp. Check the message on the page.");
+            }
+        }
+        // Initial load to display the time on page load
+        window.addEventListener("load", getLastUpdatedTime);
+    </script>
+
+
+     <!-- //////////////////////////////////////////////////////////////////////////////// -->
+      <!-- ////////////////////////////// Word count function ////////////////////////////// -->
+      <!-- //////////////////////////////////////////////////////////////////////////////// -->
+    <!-- Placeholder for total word count -->
+    <p id="totalWordCount"></p>
+    <hr>
+    <script>
+      // Function to calculate and display word count for a specified section
+      function displayWordCount(sectionId, outputId) {
+        // Get the text content from the specified section
+        const text = document.getElementById(sectionId).textContent;
+        // Split text into words based on spaces and filter out any empty strings
+        const wordArray = text.trim().split(/\s+/);
+        // Count the words
+        const wordCount = wordArray.length;
+        // Return the word count for summing purposes
+        return wordCount;
+      }
+      // Function to calculate and display total word count from selected sections
+      function displayTotalWordCount() {
+        // Calculate word count for each section and accumulate the total
+        const IntroductionCount = displayWordCount("Introduction_InText");
+        const AtmosphereCount = displayWordCount("Atmosphere_InText");
+        const HeatShieldsCount = displayWordCount("HeatShields_InText");
+        // Calculate the sum of all selected sections
+        const totalWordCount = IntroductionCount + AtmosphereCount + HeatShieldsCount;
+        // Display the total word count
+        document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+      }
+      // Run the function for specific sections and display total count when the page loads
+      window.addEventListener("load", displayTotalWordCount);
+    </script>
+    <!-- Add the recorded presentation here when it is ready (Lab H4). -->
 </body>
 </html>

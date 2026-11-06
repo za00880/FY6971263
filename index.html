@@ -1,10 +1,91 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Why Is Landing on Mars So Difficult? | ENG0018</title>
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif; color:#242424; background:#fff; margin:0; line-height:1.65;}
+    .page {max-width:850px; margin:0 auto; padding:28px 22px 65px;}
+    header {border-bottom:2px solid #24436b; padding-bottom:15px; margin-bottom:24px;}
+    .module {color:#555; font-size:.92rem;}
+    h1 {font-size:2rem; color:#203e62; line-height:1.25; margin:12px 0;}
+    h2 {font-size:1.35rem; color:#203e62; margin-top:35px;}
+    nav {background:#f1f4f7; border:1px solid #dce3ea; padding:12px 24px; margin:25px 0;}
+    nav h2 {margin:3px 0 8px; font-size:1.13rem;}
+    nav ul {margin:8px 0; padding-left:22px;}
+    a {color:#205a91; overflow-wrap:anywhere;}
+    figure {margin:25px 0;}
+    figure img {display:block; max-width:100%; height:auto; margin:0 auto;}
+    figcaption {font-size:.88rem; color:#444; margin-top:9px;}
+    .equation {max-width:490px;}
+    .terms {margin-left:18px;}
+    .terms p {margin:4px 0;}
+    .emphasis {margin:20px 0; padding-left:15px; border-left:3px solid #597ea2;}
+    .refs {padding-left:24px;}
+    .refs li {margin:13px 0; overflow-wrap:anywhere;}
+    footer {border-top:1px solid #ccc; margin-top:40px; font-size:.87rem; color:#555; padding-top:12px;}
+    @media (max-width:600px) {h1 {font-size:1.65rem;} .page {padding:18px 16px;}}
+  </style>
+</head>
+<body>
+<div class="page">
+<header>
+  <div class="module">University of Surrey | ENG0018 Conference Project</div>
+  <h1>Why Is Landing on Mars So Difficult? The Engineering Behind Successful Martian Landings</h1>
+  <p class="module">URN: [add your URN]</p>
+</header>
 
-<html>
+<nav aria-label="Contents">
+  <h2>Contents</h2>
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#atmosphere">The Challenge of Mars’s Atmosphere</a></li>
+    <li><a href="#heat-shields">Atmospheric Entry and Heat Shields</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
 
-  <head>
-    <h2>URN 1234567 </h2>
-  </head>
+<main>
+<section id="abstract"><h2>Abstract</h2>
+<p>Landing a spacecraft on the Martian surface presents a variety of significant engineering challenges due to the planet’s thin atmosphere, high entry velocities and limited opportunities for communication during the descent process. The level of aerodynamic braking produced by the Martian atmosphere is insufficient for parachutes alone to be able to decelerate a loaded spacecraft to a suitable landing speed. Therefore, engineers have had to develop complex landing systems combining heat shields, supersonic parachutes and rocket propulsion. This article aims to explore the physical challenges of an entry into the Martian atmosphere, examine the landing techniques used by the rovers NASA has landed on Mars, and discusses the limitations that the current level of technology has on future human exploration. We must understand all of these challenges in order to develop safer and more capable spacecraft which in future missions could deliver heavy payloads to the Martian surface to allow for scientific research.</p>
+</section>
 
-  
+<section id="introduction"><h2>Introduction</h2>
+<p>Mars has for a long time been the major target for space exploration due to its geological history and the potential evidence of past microbial life. In order to do this spacecraft must survive a rapid descent through the atmosphere before landing safely on the surface.</p><p>This process which is known as Entry, Descent and Landing (EDL), requires a variety of engineering systems both aboard the craft and back on Earth to operate concurrently in a controlled sequence. This process is described by NASA as the seven minutes of terror, reflecting the speed and complexity of the landing procedure <a href="#ref-nasa-nd">(NASA, no date)</a>.</p>
+</section>
+
+<section id="atmosphere"><h2>The Challenge of Mars’s Atmosphere</h2>
+<p>One of the greatest difficulties when landing on Mars is its atmospheric density. The Martian atmosphere is 100 times thinner than Earth’s which makes conventional atmospheric braking which would be possible on Earth significantly less effective.</p>
+<p>The Aerodynamic drag, which acts against a spacecraft is expressed as:</p>
+<figure><img class="equation" src="drag_equation.png" alt="Drag equation: F equals one half rho v squared C d A"><figcaption>Equation 1: Aerodynamic drag force.</figcaption></figure>
+<div class="terms">
+<p>F represents drag force</p><p>ρ represents atmospheric density</p><p>V represents Velocity</p><p>Cd represents the drag coefficient</p><p>A represents the Spacecraft CSA</p>
+</div>
+<p>Because Mars has a much lower atmospheric density than earth, a spacecraft would experience less drag at the same velocity and CSA. However the atmosphere is dense enough to generate a considerable amount of heat during the entry, which requires the spacecraft to be fitted with protective heat shielding.</p>
+<div class="emphasis"><strong>This creates an unusual engineering problem:</strong>
+<p>The atmosphere is dense enough to make entry dangerous</p><p>But</p><p>Is too thin for parachutes alone to slow the craft for a safe landing.</p><p><a href="#ref-troche">(Troche, 2024)</a></p></div>
+</section>
+
+<section id="heat-shields"><h2>Atmospheric Entry and Heat Shields</h2>
+<p>Before landing, a spacecraft must dramatically reduce its velocity. NASA’s Perseverance rover entered the Martian atmosphere while travelling at 19,500 kph <a href="#ref-jpl-2020">(NASA Jet Propulsion Laboratory, 2020)</a>.</p><p>At these speeds, compression and the heating of the gases in the air surrounding the spacecraft produce extreme thermal conditions. Without protection, sensitive technology and navigational equipment on board could be damaged or rendered too unstable to be accurate. Engineers therefore use an aeroshell incorporating a heat shield, which protects the spacecraft while also generating drag. Many concept landing systems use ablative shields which dissipate heat while they break down.</p><p>Heat-shield design is a delicate art of balancing total mass of spacecraft against the thermal protection of the interior components. Additional shielding increases the level of protection of existing equipment but at the same time limits the total amount of equipment possible to carry onboard.</p><p>NASA’s Perseverance mission included sensors used to measure the temperature and pressure at different points of entry. Data from these instruments can help to estimate the level of shielding required for the amount of equipment needed as well as improve the efficiency of existing heat shields <a href="#ref-nasa-2021">(NASA, 2021)</a>.</p>
+<figure>
+<img src="mars_entry.jpeg" alt="Artist's impression of Perseverance entering the Martian atmosphere behind its heat shield">
+<figcaption>Figure 1: Illustration of NASA&#x27;s Perseverance rover decelerating through the Martian atmosphere. The heat shield protects the spacecraft from extreme temperatures during atmospheric entry. Source: NASA/JPL-Caltech (2020). See <a href="#ref-image">image reference</a>.</figcaption>
+</figure>
+</section>
+
+<section id="references"><h2>References</h2><ol class="refs"><li id="ref-nasa-2021">NASA (2021) <i>What’s it like landing on Mars? We asked a NASA scientist: Episode 17</i>. Available at: <a href="https://www.nasa.gov/solar-system/whats-it-like-landing-on-mars-we-asked-a-nasa-scientist-episode-17/">https://www.nasa.gov/solar-system/whats-it-like-landing-on-mars-we-asked-a-nasa-scientist-episode-17/</a> (Accessed: 28 October 2026).</li>
+<li id="ref-nasa-nd">NASA (no date) <i>How we land on Mars</i>. Available at: <a href="https://science.nasa.gov/planetary-science/programs/mars-exploration/mission-timeline/how-we-land-on-mars/">https://science.nasa.gov/planetary-science/programs/mars-exploration/mission-timeline/how-we-land-on-mars/</a> (Accessed: 26 October 2026).</li>
+<li id="ref-jpl-2020">NASA Jet Propulsion Laboratory (2020) <i>Mars 2020 Perseverance launch press kit: Mission overview</i>. Available at: <a href="https://www.jpl.nasa.gov/news/press_kits/mars_2020/launch/mission/">https://www.jpl.nasa.gov/news/press_kits/mars_2020/launch/mission/</a> (Accessed: 25 October 2026).</li>
+<li id="ref-troche">Troche, K. (2024) <i>Landing on Mars: A tricky feat!</i>. Available at: <a href="https://science.nasa.gov/solar-system/skywatching/night-sky-network/landing-on-mars-a-tricky-feat/">https://science.nasa.gov/solar-system/skywatching/night-sky-network/landing-on-mars-a-tricky-feat/</a> (Accessed: 25 October 2026).</li>
+<li id="ref-image">NASA Jet Propulsion Laboratory (2020) <i>Perseverance rover decelerates in the Martian atmosphere (illustration)</i>. Available at: <a href="https://www.jpl.nasa.gov/images/pia24314-perseverance-rover-decelerates-in-the-martian-atmosphere-illustration/">https://www.jpl.nasa.gov/images/pia24314-perseverance-rover-decelerates-in-the-martian-atmosphere-illustration/</a> (Accessed: 2 November 2026).</li></ol></section>
+</main>
+
+<!-- REQUIRED BEFORE FINAL SUBMISSION: Insert the VALIDATED timestamp code provided in Surrey's Lab H3 worksheet. -->
+<!-- Also add the university banner, webpage word-count code, remaining article and presentation following the lab instructions. -->
+<footer>ENG0018 Foundation Year Conference Project — draft webpage</footer>
+</div>
+</body>
 </html>
